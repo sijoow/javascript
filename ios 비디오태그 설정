@@ -1,0 +1,24 @@
+<div class="video_area" style="background:url('/web/img/event/2024/0418/mobile_02.jpg'); background-size: cover;;margin-top:-1px;">
+		<div class="video_area" style="position: relative; width: 100%;padding-bottom:88.25%; ">
+		 <video   muted loop playsinline id="myVideo"
+
+		 class="vide_wrapper"
+		 src="https://yogico.cafe24.com/video/mobile_video.mp4" 
+				style="width:100%;height:100%">
+		  </video>
+		</div>
+	</div>
+	<button id="playButton" onclick="playVideo()">재생</button>
+	<script>
+	//비디오 태그 자동재생 설정하기 
+	document.addEventListener('DOMContentLoaded', function() {
+		setTimeout(function() {
+			var video = document.getElementById("myVideo");
+			video.play().then(() => {
+				document.getElementById("playButton").style.display = 'none';
+			}).catch(error => {
+				console.error("Playback failed", error);
+			});
+		}, 100);
+	});
+	</script>
